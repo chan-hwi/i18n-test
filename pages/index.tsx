@@ -1,9 +1,11 @@
-import { Inter } from 'next/font/google'
+import { Inter } from "next/font/google";
+import { useEffect } from "react";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return (
-    <>hello world</>
-  )
+	useEffect(() => {
+		fetch("/api/sheets").then(console.log).catch(console.error);
+	}, []);
+	return <>hello world</>;
 }
