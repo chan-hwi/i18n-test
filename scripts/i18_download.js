@@ -4,7 +4,7 @@ const {
 	spreadsheet_id,
 	private_key,
 	client_email,
-} = require("./google_key.json");
+} = require("../google_key.json");
 
 const doc = new GoogleSpreadsheet(spreadsheet_id);
 
